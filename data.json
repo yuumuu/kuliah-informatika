@@ -1,0 +1,64 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "nama": "UGM - Teknologi Informasi",
+            "rank": 2,
+            "biaya": "12 jutaan",
+            "akreditasi": "Unggul",
+            "daerah": "jogja",
+            "beasiswa": [],
+            "jalur_masuk": [
+                "SNBP",
+                "SNBT",
+                "UM - CBT"
+            ],
+            "sistem_belajar": "On Campus"
+        },
+        {
+            "id": 2,
+            "nama": "UMY",
+            "rank": 16,
+            "biaya": "15 jutaan",
+            "akreditasi": "A",
+            "daerah": "jogja",
+            "beasiswa": [
+                "Nilai Rapor",
+                "Kader Unggulan Mu",
+                "Hafidz Mu",
+                "Talenta Atlet & Seni",
+                "Dokter & Dokter Gigi",
+                "KIP-K"
+            ],
+            "jalur_masuk": [
+                "Nilai Rapor",
+                "UM - CBT",
+                "SNBT",
+                "SNBTMu",
+                "SKL",
+                "Jogjaversitas",
+                "International Admission"
+            ],
+            "sistem_belajar": "On Campus"
+        },
+        {
+            "id": 3,
+            "nama": "UGM",
+            "rank": 1,
+            "biaya": 1,
+            "akreditasi": "A",
+            "daerah": "jogja",
+            "beasiswa": [],
+            "jalur_masuk": [
+                "Nilai Rapor",
+                "UM - CBT",
+                "Prestasi"
+            ],
+            "sistem_belajar": "Hybrid"
+        }
+    ],
+    "metadata": {
+        "tanggal_dibuat": "2024-04-09",
+        "versi_api": "1.0"
+    }
+}
