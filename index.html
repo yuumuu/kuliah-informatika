@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Perbandingan Kuliah</title>
+    <style>
+        thead tr th {
+            color: #50505050;
+            font-size: 12px;
+        }
+
+        .fs-7 {
+            font-size: 12px !important;
+        }
+
+        tbody tr td {
+            color: #38383870;
+            font-size: 14px;
+        }
+
+        :root {
+            --shadow: rgba(196, 196, 196, 0.3);
+        }
+
+        .shadow {
+            box-shadow: 0 0.5rem 1rem var(--shadow) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar bg-black position-fixed w-100">
+        <div class="container-fluid justify-content-center">
+            <h1 class="navbar-brand mb-0 text-white fw-bold text-center">
+                Kuliah <span class="badge bg-warning-subtle text-black">2024</span>
+            </h1>
+        </div>
+    </header>
+
+    <main class="bg-light min-vh-100 py-5">
+        <div class="container-fluid pt-5 px-3 px-md-5">
+            <div class="d-flex justify-content-start align-items-start flex-column">
+                <h2 class="fw-bold">Perbandingan <span class="fw-normal fs-6">#haidaryum</span></h2>
+                <h6 class="badge fs-6 rounded-pill bg-warning-subtle text-dark shadow"
+                    style="--shadow: rgba(255, 170, 0, 0.3);">Teknik
+                    Informatika</h6>
+            </div>
+            <hr />
+            <div class="mt-3 mt-md-5 overflow-x-auto w-auto rounded-3 h-auto shadow">
+                <table id="collegeTable" class="table table-borderless table-sm table-hover align-middle">
+                </table>
+                <div class="card border-0">
+                    <div class="card-body">
+                        <code>* Se-Indonesia</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('https://raw.githubusercontent.com/yuumuu/data-IT-kuliah/main/data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const collegeTable = document.getElementById('collegeTable');
+                    collegeTable.innerHTML = `
+                        <thead style="table-layout:fixed;">
+                            <tr>
+                                <th style="color: #50505070;" class="text-uppercase text-center">
+                                    no
+                                </th>
+                                <th style="color: #50505070;" class="text-uppercase">
+                                    kampus
+                                </th>
+                                <th style="color: #50505070;" class="text-uppercase text-center">
+                                    rank kampus*
+                                </th>
+                                <th style="color: #50505070;" class="text-uppercase text-center">
+                                    biaya
+                                </th>
+                                <th style="color: #50505070;" class="text-uppercase text-center">
+                                    akreditasi
+                                </th>
+                                <th style="color: #50505070;" class="text-uppercase text-center">
+                                    daerah
+                                </th>
+                                <th style="color: #50505070;" class="text-uppercase text-center">
+                                    beasiswa
+                                </th>
+                                <th style="color: #50505070;" class="text-uppercase text-center">
+                                    jalur masuk
+                                </th>
+                                <th style="color: #50505070;" class="text-uppercase text-center">
+                                    sistem belajar
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${data.data.map(item => `
+                                <tr>
+                                    <th class="text-center">${item.id}</th>
+                                    <td class="ps-2"><span class="fw-bold">${item.nama}</span></td>
+                                    <td class="text-center"><span class="rounded-pill text-uppercase">${item.rank}</span></td>
+                                    <td class="text-center">
+                                        <a href="" class="nav-link badge badge-sm shadow bg-info-subtle text-uppercase text-dark">detail</a>
+                                    </td>
+                                    <td class="text-center"><span class="badge badge-sm shadow bg-primary-subtle text-dark text-uppercase">${item.akreditasi}</span></td>
+                                    <td class="text-center"><span class="fw-light text-uppercase">${item.daerah}</span></td>
+                                    <td class="text-center"><button class="nav-link badge badge-sm shadow bg-success-subtle text-uppercase text-dark">detail</button></td>
+                                    <td class="fs-7">
+                                        <ol>
+                                            ${item.jalur_masuk.map(jalur => `<li>${jalur}</li>`).join('')}
+                                        </ol>
+                                    </td>
+                                    <td class="text-center"><span class="badge badge-sm shadow bg-danger-subtle text-uppercase text-dark">${item.sistem_belajar}</span></td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    `;
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        });
+    </script>
+</body>
+
+</html>
