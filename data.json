@@ -4,7 +4,7 @@
             "id": 1,
             "nama": "UGM - Teknologi Informasi",
             "rank": 2,
-            "biaya": "12 jutaan",
+            "biaya": "8 jutaan",
             "akreditasi": "Unggul",
             "daerah": "jogja",
             "beasiswa": [],
@@ -17,7 +17,7 @@
         },
         {
             "id": 2,
-            "nama": "UMY",
+            "nama": "UMY - Teknologi Informasi",
             "rank": 16,
             "biaya": "15 jutaan",
             "akreditasi": "A",
@@ -43,18 +43,48 @@
         },
         {
             "id": 3,
-            "nama": "UGM",
-            "rank": 1,
-            "biaya": 1,
-            "akreditasi": "A",
+            "nama": "UII - Teknologi Informatika",
+            "rank": 15,
+            "biaya": "16 jutaan",
+            "akreditasi": "Unggul",
             "daerah": "jogja",
             "beasiswa": [],
             "jalur_masuk": [
-                "Nilai Rapor",
-                "UM - CBT",
-                "Prestasi"
+                "Rapor",
+                "Beasiswa",
+                "UM - CBT"
             ],
-            "sistem_belajar": "Hybrid"
+            "sistem_belajar": "On Campus"
+        },
+        {
+            "id": 4,
+            "nama": "IPB - Ilmu Komputer",
+            "rank": 5,
+            "biaya": "7 - 9 Jutaan",
+            "akreditasi": "Unggul",
+            "daerah": "bogor",
+            "beasiswa": [],
+            "jalur_masuk": [
+                "Rapor",
+                "Beasiswa",
+                "UM - CBT"
+            ],
+            "sistem_belajar": "On Campus"
+        },
+        {
+            "id": 45
+            "nama": "ITB - Teknik Informatika",
+            "rank": 3,
+            "biaya": "7 - 9 Jutaan",
+            "akreditasi": "Unggul",
+            "daerah": "bogor",
+            "beasiswa": [],
+            "jalur_masuk": [
+                "SNBP",
+                "SNBT",
+                "UM - CBT"
+            ],
+            "sistem_belajar": "On Campus"
         }
     ],
     "metadata": {
